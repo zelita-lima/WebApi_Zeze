@@ -140,3 +140,4 @@ C:\Users\Aluno Noite\source\repos\WebApi_Zeze\obj\Debug\net8.0\refint\WebApi_Zez
 C:\Users\Aluno Noite\source\repos\WebApi_Zeze\obj\Debug\net8.0\WebApi_Zeze.pdb
 C:\Users\Aluno Noite\source\repos\WebApi_Zeze\obj\Debug\net8.0\WebApi_Zeze.genruntimeconfig.cache
 C:\Users\Aluno Noite\source\repos\WebApi_Zeze\obj\Debug\net8.0\ref\WebApi_Zeze.dll
+C:\Users\Aluno Noite\source\repos\WebApi_Zeze\obj\Debug\net8.0\WebApi_Zeze.sourcelink.json

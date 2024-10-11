@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApi_Zeze")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e98564fe609163cd2f2e5ac9731ee649b035fe1")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApi_Zeze")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApi_Zeze")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

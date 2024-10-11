@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WebApi_Zeze.ORM;
 
-public partial class TbUsuarioTarde
+public partial class TbUsuario
 {
     public int Id { get; set; }
 

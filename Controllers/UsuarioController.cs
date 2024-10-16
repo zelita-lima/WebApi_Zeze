@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WebApi_Zeze.Model;
 using WebApi_Zeze.Repositorio;
 
@@ -22,108 +21,108 @@ namespace WebApi_Zeze.Controllers
         [HttpGet("{id}")]
         public ActionResult<Usuario> GetById(int id)
         {
-            // Chama o repositório para obter o funcionário pelo ID
-            var usuario = _usuarioRepo.GetById(id);
-
-            // Se o usuario não for encontrado, retorna uma resposta 404
-            if (usuario == null)
+            try
             {
-                return NotFound(new { Mensagem = "Usuario não encontrado." }); // Retorna 404 com mensagem
+                // Chama o repositório para obter o funcionário pelo ID
+                var usuario = _usuarioRepo.GetById(id);
+
+                // Se o usuário não for encontrado, retorna uma resposta 404
+                if (usuario == null)
+                {
+                    return NotFound(new { Mensagem = "Usuário não encontrado." });
+                }
+
+                // Retorna o usuário com status 200 OK
+                return Ok(usuario);
             }
-
-            // Mapeia o funcionário encontrado para incluir a URL da foto
-            var usuarioComUrl = new Usuario
+            catch (Exception ex)
             {
-                Id = usuario.Id,
-                Name = usuario.Name,
-                Senha = usuario.Senha,
-
-            };
-
-            // Retorna o funcionário com status 200 OK
-            return Ok(usuarioComUrl);
+                return StatusCode(500, new { Mensagem = "Erro ao buscar o usuário.", Detalhes = ex.Message });
+            }
         }
 
         // GET: api/Funcionario
         [HttpGet]
         public ActionResult<List<Usuario>> GetAll()
         {
-            // Chama o repositório para obter todos os funcionários
-            var usuarios = _usuarioRepo.GetAll();
-
-            // Verifica se a lista de funcionários está vazia
-            if (usuarios == null || !usuarios.Any())
+            try
             {
-                return NotFound(new { Mensagem = "Nenhum usuario encontrado." });
+                // Chama o repositório para obter todos os funcionários
+                var usuarios = _usuarioRepo.GetAll();
+
+                // Verifica se a lista está vazia
+                if (usuarios == null || !usuarios.Any())
+                {
+                    return NotFound(new { Mensagem = "Nenhum usuário encontrado." });
+                }
+
+                // Retorna a lista de usuários com status 200 OK
+                return Ok(usuarios);
             }
-
-            // Mapeia a lista de funcionários para incluir a URL da foto
-            var listaComUrl = usuarios.Select(usuario => new Usuario
+            catch (Exception ex)
             {
-                Id = usuario.Id,
-                Name = usuario.Name,
-                Senha = usuario.Senha,
-            }).ToList();
-
-            // Retorna a lista de funcionários com status 200 OK
-            return Ok(listaComUrl);
+                return StatusCode(500, new { Mensagem = "Erro ao buscar os usuários.", Detalhes = ex.Message });
+            }
         }
-
-        // POST api/<UsuarioController>        
+        // POST api/Usuario
         [HttpPost]
         public ActionResult<object> Post([FromForm] UsuarioDto novoUsuario)
         {
-            // Cria uma nova instância do modelo Funcionario a partir do DTO recebido
-            var usuario = new Usuario
+            try
             {
-                Name = novoUsuario.Name,
-                Senha = novoUsuario.Senha
-            };
+                // Cria uma nova instância de usuário a partir do DTO recebido
+                var usuario = new Usuario
+                {
+                    Name = novoUsuario.Name,
+                    Senha = novoUsuario.Senha
+                };
 
-            // Cria um objeto anônimo para retornar
-            var resultado = new
+                // Retorna o objeto com status 200 OK
+                return Ok(new
+                {
+                    Mensagem = "Usuário cadastrado com sucesso!",
+                    Name = usuario.Name,
+                    Senha = usuario.Senha
+                });
+            }
+            catch (Exception ex)
             {
-                Mensagem = "Usuário cadastrado com sucesso!",
-                Name = usuario.Name,
-                Senha = usuario.Senha
-            };
-
-            // Retorna o objeto com status 200 OK
-            return Ok(resultado);
+                return StatusCode(500, new { Mensagem = "Erro ao cadastrar o usuário.", Detalhes = ex.Message });
+            }
         }
 
-        // PUT api/<UsuarioController>        
+        // PUT api/Usuario/{id}
         [HttpPut("{id}")]
         public ActionResult<object> Put(int id, [FromForm] UsuarioDto usuarioAtualizado)
         {
-            // Busca o funcionário existente pelo Id
-            var usuarioExistente = _usuarioRepo.GetById(id);
-
-            // Verifica se o funcionário foi encontrado
-            if (usuarioExistente == null)
+            try
             {
-                return NotFound(new { Mensagem = "Usuario não encontrado." });
+                // Busca o usuário existente pelo Id
+                var usuarioExistente = _usuarioRepo.GetById(id);
+
+                // Verifica se o usuário foi encontrado
+                if (usuarioExistente == null)
+                {
+                    return NotFound(new { Mensagem = "Usuário não encontrado." });
+                }
+
+                // Atualiza os dados do usuário existente
+                usuarioExistente.Name = usuarioAtualizado.Name;
+                usuarioExistente.Senha = usuarioAtualizado.Senha;
+
+                // Retorna o objeto com status 200 OK
+                return Ok(new
+                {
+                    Mensagem = "Usuário atualizado com sucesso!",
+                    Id = usuarioExistente.Id,
+                    Name = usuarioExistente.Name,
+                    Senha = usuarioExistente.Senha
+                });
             }
-
-            // Atualiza os dados do funcionário existente com os valores do objeto recebido
-            usuarioExistente.Name = usuarioAtualizado.Name;
-            usuarioExistente.Senha = usuarioAtualizado.Senha;
-
-            // Cria a URL da foto
-            var urlFoto = $"{Request.Scheme}://{Request.Host}/api/Usuario/{usuarioExistente.Id}/foto";
-
-            // Cria um objeto anônimo para retornar
-            var resultado = new
+            catch (Exception ex)
             {
-                Mensagem = "Usuário atualizado com sucesso!",
-                id = usuarioExistente.Id,
-                Name = usuarioExistente.Name,
-                Senha = usuarioExistente.Senha,
-        
-            };
-
-            // Retorna o objeto com status 200 OK
-            return Ok(resultado);
+                return StatusCode(500, new { Mensagem = "Erro ao atualizar o usuário.", Detalhes = ex.Message });
+            }
         }
 
         // DELETE api/<UsuarioController>/5

@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|c:\\users\\aluno noite\\source\\repos\\webapi_zeze\\repositorio\\reservarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|solutionrelative:repositorio\\reservarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|c:\\users\\aluno noite\\source\\repos\\webapi_zeze\\repositorio\\emprestimorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|solutionrelative:repositorio\\emprestimorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|c:\\users\\aluno noite\\source\\repos\\webapi_zeze\\repositorio\\membrorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|solutionrelative:repositorio\\membrorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|c:\\users\\aluno noite\\source\\repos\\webapi_zeze\\orm\\tbreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|solutionrelative:orm\\tbreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|c:\\users\\aluno noite\\source\\repos\\webapi_zeze\\model\\membrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|solutionrelative:model\\membrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|c:\\users\\aluno noite\\source\\repos\\webapi_zeze\\repositorio\\funcionariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9531030-BAC9-48AB-BDE4-C41F4DC34D04}|WebApi_Zeze.csproj|solutionrelative:repositorio\\funcionariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MembroDto.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Model\\MembroDto.cs",
-              "RelativeDocumentMoniker": "Model\\MembroDto.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Model\\MembroDto.cs",
-              "RelativeToolTip": "Model\\MembroDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T19:55:08.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MembroRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\MembroRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorio\\MembroRepositorio.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\MembroRepositorio.cs",
-              "RelativeToolTip": "Repositorio\\MembroRepositorio.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIkAAAAJAAAA",
+              "Title": "FuncionarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\FuncionarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\FuncionarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\FuncionarioRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\FuncionarioRepositorio.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwHwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T19:53:41.059Z",
+              "WhenOpened": "2024-10-16T20:04:57.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReservaRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\ReservaRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorio\\ReservaRepositorio.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\ReservaRepositorio.cs",
-              "RelativeToolTip": "Repositorio\\ReservaRepositorio.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGcAAAArAAAA",
+              "Title": "EmprestimoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\EmprestimoRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\EmprestimoRepositorio.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\Repositorio\\EmprestimoRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\EmprestimoRepositorio.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAQwGkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T19:53:29.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TbReserva.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\ORM\\TbReserva.cs",
-              "RelativeDocumentMoniker": "ORM\\TbReserva.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\source\\repos\\WebApi_Zeze\\ORM\\TbReserva.cs",
-              "RelativeToolTip": "ORM\\TbReserva.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T19:52:44.638Z",
+              "WhenOpened": "2024-10-16T19:52:19.843Z",
               "EditorCaption": ""
             }
           ]

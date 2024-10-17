@@ -2,13 +2,9 @@
 
 namespace WebApi_Zeze.Model
 {
-    public class FuncionarioDto
+    public class Livro
     {
-        public string Nome { get; set; }
-        public string Email { get; set; } = null!;
-        public string Telefone { get; set; }
-        public string Cargo { get; set; } = null!;
-
+        public int Id { get; set; }
 
         public string Titulo { get; set; } = null!;
 
@@ -19,7 +15,6 @@ namespace WebApi_Zeze.Model
         public int FkCategoria { get; set; }
 
         public bool Disponibilidade { get; set; }
-
-        public virtual TbCategoria FkCategoriaNavigation { get; set; } = null!;
+       
     }
 }

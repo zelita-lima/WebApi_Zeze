@@ -24,6 +24,15 @@ builder.Services.AddScoped<UsuarioRepositorio>();
 // Adicione o repositório UsuarioR
 builder.Services.AddScoped<MembroRepositorio>();
 
+// Adicione o repositório UsuarioR
+builder.Services.AddScoped<LivroRepositorio>();
+
+// Adicione o repositório UsuarioR
+builder.Services.AddScoped<ReservaRepositorio>();
+
+// Adicione o repositório UsuarioR
+builder.Services.AddScoped<CategoriaRepositorio>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

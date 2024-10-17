@@ -2,14 +2,8 @@
 
 namespace WebApi_Zeze.Model
 {
-    public class FuncionarioDto
+    public class LIvroDto
     {
-        public string Nome { get; set; }
-        public string Email { get; set; } = null!;
-        public string Telefone { get; set; }
-        public string Cargo { get; set; } = null!;
-
-
         public string Titulo { get; set; } = null!;
 
         public string Autor { get; set; } = null!;

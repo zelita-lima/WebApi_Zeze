@@ -11,9 +11,5 @@ namespace WebApi_Zeze.Model
         public int FkMembros { get; set; }
 
         public int FkLivros { get; set; }
-
-        public virtual TbLivro FkLivrosNavigation { get; set; } = null!;
-
-        public virtual TbMembro FkMembrosNavigation { get; set; } = null!;
     }
 }

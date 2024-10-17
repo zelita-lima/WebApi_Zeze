@@ -12,18 +12,17 @@ namespace WebApi_Zeze.Repositorio
             _context = context;
         }
 
+
         public void Add(Emprestimo emprestimo)
         {
 
             // Cria uma nova entidade do tipo TbFuncionario a partir do objeto Funcionario recebido
             var tbEmprestimo = new TbEmprestimo()
             {
-                DataEmprestimo = emprestimo.DataEmprestimo,
                 DataDevolusao = emprestimo.DataDevolusao,
-                FkMembros = emprestimo.FkMembros,
+                DataEmprestimo = emprestimo.DataDevolusao,
                 FkLivros = emprestimo.FkLivros,
-                FkLivrosNavigation = emprestimo.FkLivrosNavigation,
-                FkMembrosNavigation = emprestimo.FkMembrosNavigation,
+                FkMembros = emprestimo.FkMembros,
             };
 
             // Adiciona a entidade ao contexto
@@ -32,6 +31,7 @@ namespace WebApi_Zeze.Repositorio
             // Salva as mudanças no banco de dados
             _context.SaveChanges();
         }
+
 
         public void Delete(int id)
         {
@@ -49,7 +49,7 @@ namespace WebApi_Zeze.Repositorio
             }
             else
             {
-                throw new Exception("Emprestimo não encontrado.");
+                throw new Exception("Funcionário não encontrado.");
             }
         }
 
@@ -61,18 +61,15 @@ namespace WebApi_Zeze.Repositorio
 
             foreach (var item in listTb)
             {
-                var emprestimmo = new Emprestimo
+                var emprestimo = new Emprestimo
                 {
-                    Id = item.Id,
                     DataDevolusao = item.DataDevolusao,
-                    DataEmprestimo = item.DataDevolusao,
-                    FkMembrosNavigation = item.FkMembrosNavigation,
-                    FkLivrosNavigation = item.FkLivrosNavigation,
-                    FkLivros = item.FkLivros,
+                    DataEmprestimo = item.DataEmprestimo,
                     FkMembros = item.FkMembros,
+                    FkLivros = item.FkLivros,
                 };
 
-                listFun.Add(emprestimmo);
+                listFun.Add(emprestimo);
             }
 
             return listFun;
@@ -94,10 +91,8 @@ namespace WebApi_Zeze.Repositorio
             {
                 DataDevolusao = item.DataDevolusao,
                 DataEmprestimo = item.DataEmprestimo,
-                FkMembros = item.FkMembros,
                 FkLivros = item.FkLivros,
-                FkLivrosNavigation = item.FkLivrosNavigation,
-                FkMembrosNavigation = item.FkMembrosNavigation,
+                FkMembros = item.FkMembros,
             };
 
             return emprestimo; // Retorna o funcionário encontrado
@@ -114,10 +109,8 @@ namespace WebApi_Zeze.Repositorio
                 // Atualiza os campos da entidade com os valores do objeto Funcionario recebido
                 tbEmprestimo.DataEmprestimo = emprestimo.DataEmprestimo;
                 tbEmprestimo.DataDevolusao = emprestimo.DataDevolusao;
-                tbEmprestimo.FkMembrosNavigation = emprestimo.FkMembrosNavigation;
-                tbEmprestimo.FkLivrosNavigation = emprestimo.FkLivrosNavigation;
-                tbEmprestimo.FkLivros = emprestimo.FkLivros;
                 tbEmprestimo.FkMembros = emprestimo.FkMembros;
+                tbEmprestimo.FkLivros = emprestimo.FkLivros;
 
                 // Atualiza as informações no contexto
                 _context.TbEmprestimos.Update(tbEmprestimo);
